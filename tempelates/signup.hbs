@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h1>Sign UP</h1>
+        <form action="signup" method="post" id="form">
+          <input required type="text" id="name" name="name" placeholder="Your Name"><br>
+          <input required type="email" id="email" name="email" placeholder="contact@me.com"><br>
+
+          <input required type="password" id="password" name="password" placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+            <i class="fa fa-eye" id="eye" onclick="show()"></i><br>
+
+          <input required type="name" id="address" name="address" placeholder="Address"><br>
+          <input required type="number" pattern="[0-9]{6}"  id="pincode" name="pincode" placeholder="Pincode"><br>
+          <input type="submit" value="Sign UP">
+        </form>
+        Already have an Account <a href="login">Login Here</a>
+      </div>
+    </center>
+  </body>
+    <script src="/main.js"></script>
+</html>

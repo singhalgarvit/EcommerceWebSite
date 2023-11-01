@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.826);
+    -webkit-user-select: none;
+    user-select: none;
+}
+.container{
+    margin: 80px;
+    width: 40vw;
+    line-height: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+.container h1{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+input{
+    line-height: 40px;
+    margin:20px 10px 10px 5px;
+    width: 60%;
+    padding: 0px 0px 0px 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+input[type=submit]{
+    background-color: rgba(0, 128, 0, 0.648);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0px 30px 0px 30px;
+    outline: none;
+    border: 1px solid rgba(0, 128, 0, 0.648);
+}
+input[type=submit]:hover{
+    background-color:grey;
+    border: 1px solid black;
+}
+.container a{
+    color: black;
+}
+input[type=password]{
+    margin:20px -4px 10px 5px;
+}
+.fa{
+    position: relative;
+    left: -30px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}

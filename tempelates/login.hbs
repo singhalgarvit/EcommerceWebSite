@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+     <center>
+      <div class="container">
+        <h1>Log IN</h1>
+        <form action="login" method="post" id="form">
+          <input required type="email" id="email" name="email" placeholder="contact@me.com"><br>
+
+           <input required type="password" id="password" name="password" placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+            <i class="fa fa-eye" id="eye" onclick="show()"></i><br>
+
+          <input type="submit" value="Log IN">
+        </form>
+        Don't have an Account <a href="/">Create Here</a>
+      </div>
+    </center>
+  </body>
+    <script src="/main.js"></script>
+</html>
