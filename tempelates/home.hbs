@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Garvit Singhal - Personal Portfolio</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,17 @@
   </head>
 
   <body>
-    <h1>Home Page</h1>
+      <div class="container">
+        <center><h1>Welcome to our Ecommerce Site</h1></center>
+        <div class="productList">
+          {{#each products}}
+          <div class="product">
+            <img src="{{images.image01}}" width="200" height="200" alt="Product Img">
+            <h2>{{productName}}</h2>
+            <p>{{price}}Rs. </p> 
+          </div>
+          {{/each}}
+        </div>
+      </div>
   </body>
 </html>

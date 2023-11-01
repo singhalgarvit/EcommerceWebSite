@@ -43,7 +43,8 @@ app.post("/signup", async (req, res) => {
   const checkUser = await CustomerDetails.findOne({email: req.body.email});
   if (!checkUser) {
     CustomerDetails.insertMany([data]);
-    res.render("home");
+    const products= await ProductList.find();
+    res.render("home",{products});
   } else {
     res.send("User Already Registered");
   }
@@ -54,7 +55,8 @@ app.post ("/login", async (req, res) => {
   try {
       const compareHashPassword= await bcrypt.compare(req.body.password, check.password);
       if (compareHashPassword){
-        res.render("home");
+        const products= await ProductList.find();
+        res.render("home",{products});
       } else {
         res.send("Wrong Password");
       }
@@ -71,7 +73,9 @@ app.post("/admin", async (req,res)=>{
     images:[req.body.image01,req.body.image02,req.body.image03,req.body.image04]
   }
   ProductList.insertMany([data]);
-  res.render("home");
+  req.body="";
+  const products= await ProductList.find();
+    res.render("home",{products});
 });
 
 app.listen(4000, () => {
